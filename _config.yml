@@ -13,18 +13,17 @@
 title: MaybeFIRE
 
 # Your name to show in the footer
-author: Brian Williammee
+author: TBD
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About: "about"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
   Privacy: "privacy"
 
 ################
