@@ -11,7 +11,7 @@ information easier to use within your own financial planning.  My initial focus 
 retirement phase, but I may get around to some posts on the accumulation phase as well.
 
 ## About me
-Ever since I graduated college and started working, and I wanted to stop working.  In 2023, my
-spouse and I hit our financial goal for retirement.  We quit our Big Tech jobs to pursue hobbies
-and the occasional passion project.
+Ever since I started working, I wanted to stop working.  In 2023, my spouse and I hit our
+financial goal for retirement.  We quit our Big Tech jobs to pursue hobbies and the occasional
+passion project.
 
