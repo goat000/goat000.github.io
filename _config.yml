@@ -13,7 +13,7 @@
 title: MaybeFIRE
 
 # Your name to show in the footer
-author: TBD
+author: Brian Williammee
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -60,7 +60,7 @@ social-network-links:
 #  youtube: "@daattali"
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: brian-williammee
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -200,7 +200,7 @@ goat_counter: true
 #fb_comment_id: ""
 
 # To use CommentBox, sign up for a Project ID on https://commentbox.io
-#commentbox: "" # Project ID, e.g. "5694267682979840-proj"
+commentbox: "5734507281907712-proj"
 
 # To use Utterances comments: (0) uncomment the following section, (1) fill in
 # "repository" (make sure the repository is public), (2) Enable Issues in your repository,
