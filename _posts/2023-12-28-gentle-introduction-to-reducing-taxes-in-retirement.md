@@ -36,7 +36,7 @@ I encourage you to play around with the sliders below before looking at the solu
 
 ## Super-fun game - minimize your tax burden
 <!-- Most of the IDs and strings in this file are also used in the Selenium tests in integration_tests/test_example1.py -->
-<!-- So make sure to update those when messing with these. -->
+<!-- So make sure to update those when updating these. -->
 <div id="flexbox-container">
     <div id="sliders">
         <div id="tax-bracket-indicator-container" style="grid-row: 2; grid-column: 1;">
@@ -104,9 +104,22 @@ higher taxes overall.
 The worst outcome is to withdraw all of the money in one year.  If you do that, you'll pay $8032!
 That's more than *six times* as much as if you withdraw evenly!
 
-## Conclusion
-* **Fill the best buckets first.**  You will generally want to plan out retirement to make sure that
-you will make the maximum possible 0%-taxed withdrawals every year, before planning on any
-withdrawals in the 10% bracket.  The same is true for taking the maximum possible 10%-taxed
-withdrawals every year before planning on any withdrawals in the 12% bracket, and so on.
+That'll all because of the progressive nature of federal income tax.  As you add more income in a
+single year, you increase not just the amount subject to taxation, but the *tax rate* itself.  The
+relevant income tax rates for the game in this post are:
 
+| Rate | Income, for Married Filing Jointly (in 2024) |
+| ----------------------------------- | ------------- |
+|  0% (because of standard deduction) | First $29,200 |
+| 10%                                 | Next  $11,600 |
+| 12%                                 | Next  $35,500 |
+
+The numbers are different for different tax statuses (Single, Married Filing Separately, Head of
+Household), but the same concept applies.
+
+## Conclusion
+* **Fill the lowest-tax buckets first.**  You will generally want to plan out retirement to make the
+maximum possible 0%-taxed withdrawals every year, before planning on any withdrawals in the 10%
+bracket.  The same is true for taking the maximum possible 10%-taxed withdrawals every year before
+planning on any withdrawals in the 12% bracket, and so on.  You can also think of it as *spreading
+out your retirement income evenly* over the years.
