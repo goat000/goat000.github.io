@@ -11,6 +11,14 @@
    I had been using flex-wrap:wrap, but as the layout evolved, it came to look pretty
    terribly muddled when wrapping. */
 #flexbox-container {
+    margin-left:-118px;
+    margin-right:-118px;
+    border: 2px solid #707070;
+    border-radius: 6px;
+    padding: 10px; /* Adjust as needed */
+    padding-bottom: 40px; /* Extra room for larger "not withdrawing full amount" message */
+    /* background-color: #ffffff; /* Adjust the color as needed */
+
     display: flex;
     flex-wrap: nowrap;
     font-family: Arial, Helvetica, sans-serif;
