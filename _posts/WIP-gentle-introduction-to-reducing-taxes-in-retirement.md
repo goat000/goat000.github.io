@@ -8,24 +8,33 @@ subtitle: "Or: fun with sliders"
 tags: drawdown, retirement, tax, interactive
 # author: Brian Williammee
 ---
-Let's start simple, and then add one concept at a time, until we get somewhere useful for real-life retirement drawdown planning.  We'll start with these assumptions:
+
+I want to do a series of posts that build towards a calculator that helps minimize taxes during
+retirement while also maximizing the ACA (Obamacare) subsidy received during retirement (jointly
+optimizing).  It'll do this by ordering withdrawals from different accounts over the years.  There
+are a lot of good calculators already, but none that I've seen can optimize ACA benefits along with
+taxes.  Aside from the end result, I want to help readers understand the underlying concepts.
+
+Let's start simple, and then add one concept at a time, until we get somewhere useful for real-life
+retirement drawdown planning.
+
+We'll start with these assumptions:
 
 * You have $100,000 in savings, all in a traditional IRA
 * You plan to withdraw it over the next 3 years, starting in 2024
-  - Maybe because you plan on relying on social security after that, but mostly for the sake of having a simple exercise
+* You file taxes as married filing jointly, and you use the standard deduction. You have no tax
+credits, and no dependents
+* Your investment returns are 0%, inflation is 0%, and federal tax brackets and standard deduction
+will not change in the next 3 years.
 * You and your spouse are 60 years old, which means:
-  - You can draw from retirement accounts with no penalty (you're older than 59.5)
-  - You are not receiving Social Security payments yet (you're younger than 62)
-  - You are not subject to Required Minimum Distribution (you're younger than 72)
-* You file taxes as married filing jointly, and you use the standard deduction. You have no tax credits, and no dependents
-* Your investment returns are 0%, inflation is 0%, and federal tax brackets and standard deduction will not change in the next few years.
+  - You can draw from retirement accounts with no penalty
+  - You are not receiving Social Security payments yet
+  - You are not subject to Required Minimum Distribution
 
 **How do you minimize the taxes you pay on those three years of withdrawals?**
+
 I encourage you to play around with the sliders below before looking at the answer.
 
-
-
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 <!-- Most of the IDs and strings in this file are also used in the Selenium tests in integration_tests/test_example1.py -->
 <!-- So make sure to update those when messing with these. -->
 <div id="flexbox-container">

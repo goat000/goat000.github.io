@@ -76,7 +76,10 @@ body {
     margin-bottom: 5px;
 }
 
-.slider-vertical {
+/* When I ported this exercise to a Github pages/Jekyll site, the class selector was no longer 
+   specific enough, and was being overriden.  I'll use the extra parent id specificity in a few
+   places in this file for the same reason. */
+#sliders .slider-vertical{
     width: 100px;
     height: 100%;
 }
@@ -95,7 +98,7 @@ body {
     z-index: 2;
 }
 
-.slider-vertical .ui-slider-handle {
+#sliders .slider-vertical .ui-slider-handle {
     width: 100%;
     left: 0; /* Without this, the handles end up a bit to the left of the slider body. */
 }
@@ -112,7 +115,7 @@ input.slider-value-input {
     ****** Styles related to the tax buckets section ******
 */ 
 
-.buckets {
+#flexbox-container .buckets {
     width: 125px;
     text-align:center;
 }
@@ -134,8 +137,7 @@ input.slider-value-input {
     position: relative;
 }
 
-/* Might be more intuitive to reuse the image from the sliders, but I'm not sure, it seemed
-   busy. */
+/* Might be more intuitive to reuse the image from the sliders, but that seemed... busy. */
 .bucket-fill {
     background-color: blue;
     width: 100%;

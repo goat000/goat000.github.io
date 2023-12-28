@@ -8,7 +8,6 @@
         var total = 0;
 
         // Calculate the total of the sldiers that aren't the current one
-        // $(".slider-vertical").each(function(i) {
         for (i in currentSliderValues) {
             if (parseInt(i) !== index) { // Exclude the current slider
                 total += currentSliderValues[i];
