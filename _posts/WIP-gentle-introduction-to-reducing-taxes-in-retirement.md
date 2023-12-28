@@ -3,23 +3,23 @@ layout:
 title: A gentle introduction to reducing taxes in retirement
 subtitle: "Or: fun with sliders"
 # cover-img: /assets/img/path.jpg
-# thumbnail-img: /assets/img/thumb.png
+thumbnail-img: /assets/img/gentle-introduction-to-reducing-taxes-in-retirement.webp
 # share-img: /assets/img/path.jpg
 tags: drawdown, retirement, tax, interactive
 # author: Brian Williammee
 ---
 
-I want to do a series of posts that build towards a calculator that helps minimize taxes during
-retirement while also maximizing the ACA (Obamacare) subsidy received during retirement (jointly
-optimizing).  It'll do this by ordering withdrawals from different accounts over the years.  There
-are a lot of good calculators already, but none that I've seen can optimize ACA benefits along with
-taxes.  Aside from the end result, I want to help readers understand the underlying concepts.
+I want to do a series of posts that build towards a calculator useful framework for real-life
+retirement drawdown planning.  The end result, if I get that far, will be:
+* A retirement drawdown calculator that takes in real-life details and provides a tax-optimized and
+Obamacare-optimized drawdown plan covering all the expected years of retirement.
+* A series of posts that explain all the concepts used in the calculator.
 
-Let's start simple, and then add one concept at a time, until we get somewhere useful for real-life
-retirement drawdown planning.
+To begin with, let's play a simple game to demonstrate a simple tax planning concept.  We can build
+on it in future posts.
 
-We'll start with these assumptions:
-
+## Rules
+* **Your goal: Find the lowest possible federal tax amount for the following situation.**
 * You have $100,000 in savings, all in a traditional IRA
 * You plan to withdraw it over the next 3 years, starting in 2024
 * You file taxes as married filing jointly, and you use the standard deduction. You have no tax
@@ -31,10 +31,10 @@ will not change in the next 3 years.
   - You are not receiving Social Security payments yet
   - You are not subject to Required Minimum Distribution
 
-**How do you minimize the taxes you pay on those three years of withdrawals?**
 
-I encourage you to play around with the sliders below before looking at the answer.
+I encourage you to play around with the sliders below before looking at the solution below.
 
+## Super-fun game - minimize your tax burden
 <!-- Most of the IDs and strings in this file are also used in the Selenium tests in integration_tests/test_example1.py -->
 <!-- So make sure to update those when messing with these. -->
 <div id="flexbox-container">
@@ -95,4 +95,18 @@ I encourage you to play around with the sliders below before looking at the answ
         <div style="grid-row: 4;" id="min-tax-or-not"></div>
     </div>
 </div>
+
+As long as you withdraw at least $29200 each year, you'll pay $1240 in federal income taxes overall.
+If you withdraw less than that in any one year, you won't "use up" the full amount of your standard
+deduction that year, and that will show up as higher taxes in one of the other years, leading to
+higher taxes overall.
+
+The worst outcome is to withdraw all of the money in one year.  If you do that, you'll pay $8032!
+That's more than *six times* as much as if you withdraw evenly!
+
+## Conclusion
+* **Fill the best buckets first.**  You will generally want to plan out retirement to make sure that
+you will make the maximum possible 0%-taxed withdrawals every year, before planning on any
+withdrawals in the 10% bracket.  The same is true for taking the maximum possible 10%-taxed
+withdrawals every year before planning on any withdrawals in the 12% bracket, and so on.
 
