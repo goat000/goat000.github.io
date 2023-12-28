@@ -35,6 +35,8 @@ will not change in the next 3 years.
 I encourage you to play around with the sliders below before looking at the solution below.
 
 ## Super-fun game - minimize your tax burden
+
+<div style="font-size: smaller">This exercise currently does not work on mobile devices.  Apologies!</div>
 <!-- Most of the IDs and strings in this file are also used in the Selenium tests in integration_tests/test_example1.py -->
 <!-- So make sure to update those when updating these. -->
 <div id="flexbox-container">
