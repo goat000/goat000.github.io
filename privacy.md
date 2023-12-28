@@ -18,7 +18,7 @@ for an explanation of why this site does not have a GDPR consent notice.
 This website uses CommentBox to save and display users' comments. See the
 [CommentBox privacy policy](https://commentbox.io/privacy) for the specific information
 that Goatcounter collects.  If you sign in to leave comments via another login service, your
-data will be subject to the privacy policy of that service.
+data will also be subject to the privacy policy of that service.
 
 If you visit external sites linked by this site, including social media sites, your personal
 information will be used and stored according to those sites' privacy policies.
