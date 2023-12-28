@@ -3,19 +3,6 @@
    And in all honesty, this all may have bigger problems on small screens - I haven't
    tested it.*/
 
-/* Consistency across browsers.
-   In Chrome, cleans up several little border offset issues nicely,
-   and prevents slider handles from being shifted to the right a couple px. */
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;            
-}
-
-body {
-    /* Background color that ChatGPT suggested.  Works for me. */
-    background-color: #f4f7f6;
-}
-
 /* I initially wanted a flexbox rather than grid at this highest level, because I didn't
    actually want the three major sections (i.e. the chunks separated by arrows) to be fully
    aligned. I'm not so sure it was the right call now, but I don't know that I'll go
@@ -26,6 +13,10 @@ body {
 #flexbox-container {
     display: flex;
     flex-wrap: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border-box cleans up several little border offset issues nicely, and prevents jQuery UI
+       slider handles from being shifted to the right a couple px. */
+    box-sizing: border-box;   
 }
 #flexbox-container > div {
     margin-right: 10px;
@@ -69,8 +60,8 @@ body {
     width: 100px;
 }
 
-.slider-label {
-    height: 40px;
+#sliders .slider-label {
+    height: 48px;
     width: 100px;
     text-align: center;
     margin-bottom: 5px;
@@ -116,7 +107,7 @@ input.slider-value-input {
 */ 
 
 #flexbox-container .buckets {
-    width: 125px;
+    width: 150px;
     text-align:center;
 }
 
@@ -149,10 +140,11 @@ input.slider-value-input {
 input.bucket-value-numeric {
     /* Explicit width rather than 100%, because I don't want to shrink when
        the viewport is small. */
-    width: 125px;
+    width: 150px;
     height: 25 px;
     text-align: center;
-    margin-top: 5px;
+    font-size: smaller;
+    margin-top: 0px;
     border: none;
     background-color: transparent;
 }
@@ -165,6 +157,7 @@ div.results {
     width: 250px;
     display: grid;
     grid-template-rows: 1fr auto auto 1fr;
+    text-align: center;
 }
 
 input.total-tax {
