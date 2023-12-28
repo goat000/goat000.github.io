@@ -1,4 +1,4 @@
-    // Don't let the total withdrawal amount go beyond the overall target.
+       // Don't let the total withdrawal amount go beyond the overall target.
     // I passed in currentSliderValues to make this unit testable, but I sort of regret it.  Now,
     // in both places I call this, I have to build a currentSliderValues and pass it, rather than
     // just building it once in this function.  But for the sake of trying things out, I'm leaving
@@ -55,15 +55,16 @@ $(function() {
     $('#zero-percent-bucket').height(100 * initialBucketValues[0] / sizeOf0Bucket + '%');
     $('#ten-percent-bucket').height(100 * initialBucketValues[1] / sizeOf10Bucket + '%');
     $('#twelve-percent-bucket').height(100 * initialBucketValues[2] / sizeOf12Bucket + '%');
-    $('#zero-percent-value').val("Withdrawal: " + usDollar.format(initialBucketValues[0]));
-    $('#ten-percent-value').val("Withdrawal: " + usDollar.format(initialBucketValues[1]));
-    $('#twelve-percent-value').val("Withdrawal: " + usDollar.format(initialBucketValues[2]));
-    $('#total-tax').val(usDollar.format(initialTax));
+    $('#zero-percent-value').text("Withdrawal: " + usDollar.format(initialBucketValues[0]));
+    $('#ten-percent-value').text("Withdrawal: " + usDollar.format(initialBucketValues[1]));
+    $('#twelve-percent-value').text("Withdrawal: " + usDollar.format(initialBucketValues[2]));
+    $('#total-tax').text(usDollar.format(initialTax));
+    $('#total-tax').css('color', '#994444'); // softish red
     $('#full-withdrawal-or-not').html(fullWithdrawalText);
     $('#min-tax-or-not').html(suboptimalTax);
-    $('#zero-percent-tax').val("Tax: " + usDollar.format(initialTaxPerBucket[0]));
-    $('#ten-percent-tax').val("Tax: " + usDollar.format(initialTaxPerBucket[1]));
-    $('#twelve-percent-tax').val("Tax: " + usDollar.format(initialTaxPerBucket[2]));
+    $('#zero-percent-tax').text("Tax: " + usDollar.format(initialTaxPerBucket[0]));
+    $('#ten-percent-tax').text("Tax: " + usDollar.format(initialTaxPerBucket[1]));
+    $('#twelve-percent-tax').text("Tax: " + usDollar.format(initialTaxPerBucket[2]));
 
     function updateSliderHandles() {
         $(".slider-vertical").each(function() {
@@ -99,29 +100,34 @@ $(function() {
         $('#ten-percent-bucket').height(100 * amountIn10Bucket / sizeOf10Bucket + '%');
         $('#twelve-percent-bucket').height(100 * amountIn12Bucket / sizeOf12Bucket + '%');
 
-        $('#zero-percent-value').val("Withdrawal: " + usDollar.format(amountIn0Bucket));
-        $('#ten-percent-value').val("Withdrawal: " + usDollar.format(amountIn10Bucket));
-        $('#twelve-percent-value').val("Withdrawal: " + usDollar.format(amountIn12Bucket));
+        $('#zero-percent-value').text("Withdrawal: " + usDollar.format(amountIn0Bucket));
+        $('#ten-percent-value').text("Withdrawal: " + usDollar.format(amountIn10Bucket));
+        $('#twelve-percent-value').text("Withdrawal: " + usDollar.format(amountIn12Bucket));
 
-        $('#zero-percent-tax').val("Tax: " + usDollar.format(taxFrom0Bucket));
-        $('#ten-percent-tax').val("Tax: " + usDollar.format(taxFrom10Bucket));
-        $('#twelve-percent-tax').val("Tax: " + usDollar.format(taxFrom12Bucket));
+        $('#zero-percent-tax').text("Tax: " + usDollar.format(taxFrom0Bucket));
+        $('#ten-percent-tax').text("Tax: " + usDollar.format(taxFrom10Bucket));
+        $('#twelve-percent-tax').text("Tax: " + usDollar.format(taxFrom12Bucket));
 
-        $('#total-tax').val(usDollar.format(overallTax));
+        $('#total-tax').text(usDollar.format(overallTax));
 
         if (totalWithdrawal == fullWithdrawalAmount) {
             $('#full-withdrawal-or-not').html(fullWithdrawalText);
 
             if (overallTax == minTax) {
                 $('#min-tax-or-not').html(optimalTax);
+                $('#total-tax').css('color', '#449944'); // softish green
             } else if (overallTax > minTax) {
                 $('#min-tax-or-not').html(suboptimalTax);
+                $('#total-tax').css('color', '#994444'); // softish red
             } else {
                 $('#min-tax-or-not').html("Error, sorry.");
+                
             }
         } else if (totalWithdrawal < fullWithdrawalAmount) {
             $('#full-withdrawal-or-not').html(partialWithdrawalText);
             $('#min-tax-or-not').html("");
+             // Don't give success/failure color indication when not fully withdrawing.
+            $('#total-tax').css('color', '#000');
         } else {
             $('#full-withdrawal-or-not').text("Error, sorry.");
             $('#min-tax-or-not').html("");

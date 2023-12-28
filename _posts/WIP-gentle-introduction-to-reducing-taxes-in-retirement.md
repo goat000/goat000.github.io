@@ -73,25 +73,25 @@ I encourage you to play around with the sliders below before looking at the answ
         <div class="bucket-container">
             <div class="bucket-fill" id="zero-percent-bucket"></div>
         </div>
-        <input type="text" id="zero-percent-value" class="bucket-value-numeric" readonly/>
-        <input type="text" id="zero-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;" readonly/>
+        <div id="zero-percent-value" class="bucket-value-numeric"></div>
+        <div id="zero-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;"></div>
         <div class="bucket-label">Withdrawals taxed at 10%</div>
         <div class="bucket-container">
             <div class="bucket-fill" id="ten-percent-bucket"></div>
         </div>
-        <input type="text" id="ten-percent-value" class="bucket-value-numeric" readonly/>
-        <input type="text" id="ten-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;" readonly/>
+        <div id="ten-percent-value" class="bucket-value-numeric"></div>
+        <div id="ten-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;"></div>
         <div class="bucket-label">Withdrawals taxed at 12%</div>
         <div class="bucket-container">
             <div class="bucket-fill"  id="twelve-percent-bucket"></div>
         </div>
-        <input type="text" id="twelve-percent-value" class="bucket-value-numeric" readonly/>
-        <input type="text" id="twelve-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;" readonly/>
+        <div id="twelve-percent-value" class="bucket-value-numeric"></div>
+        <div id="twelve-percent-tax" class="bucket-value-numeric" style="margin-bottom:25px;"></div>
     </div>
     <div class="arrow"><p style="grid-row:2">➡️</p></div>
     <div class="results">
         <div style="grid-row: 2; font-weight:bold">Total tax paid on all withdrawals</div>
-        <input type="text" id="total-tax" class="total-tax" style="grid-row: 3; font-weight:bold; font-size: 20px;" readonly/>
+        <div id="total-tax" class="total-tax" style="grid-row: 3; font-weight:bold; font-size: 20px;"></div>
         <div style="grid-row: 4;" id="min-tax-or-not"></div>
     </div>
 </div>
