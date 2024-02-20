@@ -29,7 +29,7 @@ will not change in the next 3 years.
 * You and your spouse are 60 years old, which means:
   - You can draw from retirement accounts with no penalty
   - You are not receiving Social Security payments yet
-  - You are not subject to Required Minimum Distribution
+  - You are not subject to Required Minimum Distributions
 
 
 I encourage you to play around with the sliders below before looking at the solution below.
